@@ -28,11 +28,17 @@ const PlatformIconList = ({ platforms }: props) => {
     web: BsGlobe,
   };
   return (
-    <HStack marginY={1}>
-      {platforms.map((platform) => (
-        <Icon as={iconMaps[platform.slug]} color="black"></Icon>
-      ))}
-    </HStack>
+    <>
+      <HStack marginY={1}>
+        {platforms.map((platform) => (
+          <Icon
+            key={platform.slug}
+            as={iconMaps[platform.slug]}
+            color="black"
+          ></Icon>
+        ))}
+      </HStack>
+    </>
   );
 };
 
